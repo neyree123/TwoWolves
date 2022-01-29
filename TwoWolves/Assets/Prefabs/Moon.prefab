@@ -1,5 +1,75 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1856641862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1856641864}
+  - component: {fileID: 1856641863}
+  m_Layer: 0
+  m_Name: ObjectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1856641864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856641862}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.87163, y: 0.44811943, z: -1.1176242}
+  m_LocalScale: {x: 1.4285713, y: 1.4285713, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3490780564357860347}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1856641863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856641862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b16437b8213a24bbf50c79024893f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  white: {r: 0.9843138, g: 0.9568628, b: 0.427451, a: 0}
+  black: {r: 0.6, g: 0.54901963, b: 0.9215687, a: 0}
+  blackObjects: []
+  whiteObjects: []
+  objectPrefab: {fileID: 7652340531732688399, guid: d9fe9c47ae4e81440a8819fed871fcad, type: 3}
+  roundTimeTotal: 50
+  timeBeforeSpawnRateIncrease: 20
+  timer: 0
+  maxTimeBeforeObjectSpawn: 10
+  minTimeBeforeObjectSpawn: 5
+  spawnChangeIncrement: 2
+  timerText: {fileID: 0}
+  moonWidth: 2
+  mapWidth: 20
+  mapHeight: 8
+  whiteInitialSpawnLocations: []
+  blackInitialSpawnLocations: []
+  spawnDelayMin: 5
+  spawnDelayMax: 10
+  minSpawnAmount: 1
+  maxSpawnAmount: 2
+  powerUpParent: {fileID: 8343277890219533141}
+  maxCurrentAmount: 5
+  powerUpPrefabs:
+  - {fileID: 2715670358135796068, guid: d0d5e5662f202d046accdd33223585f4, type: 3}
+  - {fileID: 1022751106526627209, guid: 1f7c37f3d53b92649a6df5429dce6d6f, type: 3}
+  - {fileID: 4955701407138542355, guid: ad76a79d895ee7148a6843dc63ec3943, type: 3}
 --- !u!1 &3490780563782603746
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,7 +95,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3490780563782603746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.267, y: 0.33408275, z: 1.2542698}
+  m_LocalPosition: {x: 1.231, y: 0.33408275, z: 1.2542698}
   m_LocalScale: {x: 2.5394, y: 5.7625, z: 1}
   m_Children: []
   m_Father: {fileID: 3490780564357860347}
@@ -152,7 +222,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 1, g: 0.9175284, b: 0, a: 1}
   m_FlipX: 0
@@ -255,7 +325,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3490780564357860347}
   - component: {fileID: 3490780564357860346}
-  - component: {fileID: -8004389307835911246}
   m_Layer: 0
   m_Name: Moon
   m_TagString: Untagged
@@ -272,13 +341,14 @@ Transform:
   m_GameObject: {fileID: 3490780564357860344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.002, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 3490780563796886677}
   - {fileID: 3490780564525977734}
   - {fileID: 3490780563782603748}
   - {fileID: 3490780563805214301}
   - {fileID: 8343277890219533141}
+  - {fileID: 1856641864}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -306,44 +376,8 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 64
-  collisionRadius: 2
---- !u!114 &-8004389307835911246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3490780564357860344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14b16437b8213a24bbf50c79024893f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  white: {r: 1, g: 0.92549026, b: 0, a: 0}
-  black: {r: 0.86666673, g: 0, b: 1, a: 0}
-  blackObjects: []
-  whiteObjects: []
-  objectPrefab: {fileID: 7652340531732688399, guid: d9fe9c47ae4e81440a8819fed871fcad, type: 3}
-  roundTimeTotal: 50
-  timeBeforeSpawnRateIncrease: 20
-  timer: 0
-  maxTimeBeforeObjectSpawn: 10
-  minTimeBeforeObjectSpawn: 5
-  spawnChangeIncrement: 2
-  timerText: {fileID: 0}
-  moonWidth: 2
-  mapWidth: 20
-  mapHeight: 8
-  spawnDelayMin: 5
-  spawnDelayMax: 10
-  minSpawnAmount: 1
-  maxSpawnAmount: 2
-  powerUpParent: {fileID: 8343277890219533141}
-  maxCurrentAmount: 5
-  powerUpPrefabs:
-  - {fileID: 2715670358135796068, guid: d0d5e5662f202d046accdd33223585f4, type: 3}
-  - {fileID: 1022751106526627209, guid: 1f7c37f3d53b92649a6df5429dce6d6f, type: 3}
-  - {fileID: 4955701407138542355, guid: ad76a79d895ee7148a6843dc63ec3943, type: 3}
+  collisionRadius: 1.4
+  objectParent: {fileID: 0}
 --- !u!1 &3490780564525977732
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3490780564525977732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.233, y: 0.33408275, z: 1.2542698}
+  m_LocalPosition: {x: -1.269, y: 0.33408275, z: 1.2542698}
   m_LocalScale: {x: 2.5394, y: 5.7625, z: 1}
   m_Children: []
   m_Father: {fileID: 3490780564357860347}
