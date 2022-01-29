@@ -484,6 +484,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+--- !u!4 &340623839 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8343277890219533141, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+  m_PrefabInstance: {fileID: 259634057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &481870131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,8 +1615,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b16437b8213a24bbf50c79024893f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  white: {r: 1, g: 1, b: 1, a: 0}
-  black: {r: 0, g: 0, b: 0, a: 0}
+  white: {r: 0.9843138, g: 0.9568628, b: 0.427451, a: 0}
+  black: {r: 0.6, g: 0.54901963, b: 0.9215687, a: 0}
   blackObjects: []
   whiteObjects: []
   objectPrefab: {fileID: 7652340531732688399, guid: d9fe9c47ae4e81440a8819fed871fcad, type: 3}
@@ -1627,13 +1632,16 @@ MonoBehaviour:
   mapHeight: 8
   whiteInitialSpawnLocations: []
   blackInitialSpawnLocations: []
-  spawnDelayMin: 0
-  spawnDelayMax: 0
-  minSpawnAmount: 0
-  maxSpawnAmount: 0
-  powerUpParent: {fileID: 0}
-  maxCurrentAmount: 0
-  powerUpPrefabs: []
+  spawnDelayMin: 5
+  spawnDelayMax: 10
+  minSpawnAmount: 1
+  maxSpawnAmount: 2
+  powerUpParent: {fileID: 340623839}
+  maxCurrentAmount: 5
+  powerUpPrefabs:
+  - {fileID: 2715670358135796068, guid: d0d5e5662f202d046accdd33223585f4, type: 3}
+  - {fileID: 1022751106526627209, guid: 1f7c37f3d53b92649a6df5429dce6d6f, type: 3}
+  - {fileID: 4955701407138542355, guid: ad76a79d895ee7148a6843dc63ec3943, type: 3}
 --- !u!4 &1856641864
 Transform:
   m_ObjectHideFlags: 0
