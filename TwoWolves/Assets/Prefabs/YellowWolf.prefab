@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18d4e260e89b1414ba70ef0c2a38290c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: 0
   speed: 5
+  colorMode: 0
 --- !u!50 &3486416310138401129
 Rigidbody2D:
   serializedVersion: 4
@@ -162,7 +162,12 @@ MonoBehaviour:
   objectParent: {fileID: 0}
   dampeningConstant: 0.1
   cooldown: 1
+  canUse: 1
   repulseForce: 500
   repulseRange: 5
+  purpleRepulsion: {fileID: 199333902326789081, guid: 604207a2fcaf22c42a42ef7b95ae3929, type: 3}
+  yellowRepulsion: {fileID: 6370193808397192340, guid: bd9631f5196a4f84291b56f9a6827464, type: 3}
   attractForce: 500
   attractRange: 5
+  purpleAttraction: {fileID: 236879474269570409, guid: 2dc805a7de8f00a4e8f8ab6f46c0197b, type: 3}
+  yellowAttraction: {fileID: 8099807793225417860, guid: 8c5f55ee7f1720f4db1b40b5ed66eb64, type: 3}
