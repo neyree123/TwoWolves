@@ -10,11 +10,14 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     Forces forces;
     public ColorMode colorMode;
+    private Animator anim;
+    private bool isFlipped = false;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         forces = GetComponent<Forces>();
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
@@ -25,6 +28,17 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputValue value)
     {
         moveDir = value.Get<Vector2>();
+        anim.SetFloat("Speed", Mathf.Abs(moveDir.magnitude));
+        if(moveDir.x < 0 && !isFlipped)
+        {
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+            isFlipped = true;
+        }
+        else if (moveDir.x > 0 && isFlipped)
+        {
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+            isFlipped = false;
+        }
     }
 
     public void OnActionPurple()
