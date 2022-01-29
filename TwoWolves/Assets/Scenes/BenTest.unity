@@ -750,6 +750,14 @@ MonoBehaviour:
   moonWidth: 2
   mapWidth: 20
   mapHeight: 8
+  spawnDelayMin: 5
+  spawnDelayMax: 10
+  minSpawnAmount: 1
+  maxSpawnAmount: 2
+  powerUpPrefabs:
+  - {fileID: 1022751106526627209, guid: 1f7c37f3d53b92649a6df5429dce6d6f, type: 3}
+  - {fileID: 2715670358135796068, guid: d0d5e5662f202d046accdd33223585f4, type: 3}
+  - {fileID: 4955701407138542355, guid: ad76a79d895ee7148a6843dc63ec3943, type: 3}
 --- !u!4 &1491966300
 Transform:
   m_ObjectHideFlags: 0

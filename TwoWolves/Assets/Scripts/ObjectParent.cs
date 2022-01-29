@@ -30,6 +30,16 @@ public class ObjectParent : MonoBehaviour
     public float mapWidth = 20f;
     public float mapHeight = 8f;
 
+    [Header("PowerUp Spawning")]
+    public float spawnDelayMin;
+    public float spawnDelayMax;
+    public int minSpawnAmount;
+    public int maxSpawnAmount;
+    public Transform powerUpParent;
+    public int maxCurrentAmount;
+
+    public List<GameObject> powerUpPrefabs;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +56,7 @@ public class ObjectParent : MonoBehaviour
 
         StartCoroutine(SpawnObjectsOverTime());
         StartCoroutine(IncreaseSpawnRate());
+        StartCoroutine(SpawnPowerups());
     }
 
     // Update is called once per frame
@@ -157,5 +168,38 @@ public class ObjectParent : MonoBehaviour
             StartCoroutine(SpawnObjectsOverTime());
         }
 
+    }
+
+    public IEnumerator SpawnPowerups()
+    {
+        while(timer < roundTimeTotal)
+        {
+            int currentPowerups = powerUpParent.childCount;
+            int max = maxCurrentAmount -  currentPowerups > maxSpawnAmount ? maxSpawnAmount : maxCurrentAmount - currentPowerups;
+            if (currentPowerups < maxCurrentAmount)
+            {
+                for (int i = 0; i < Random.Range(minSpawnAmount, max); i++)
+                {
+                    bool spawned = false;
+                    while (!spawned)
+                    {
+                        Vector3 pos = new Vector3(Random.Range(-(mapWidth / 2), mapWidth / 2), Random.Range(-(mapHeight / 2), mapHeight / 2));
+
+                        //Debug.Log(yellowPos);
+
+                        if ((pos - transform.position).magnitude < moonWidth)
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            Instantiate(powerUpPrefabs[Random.Range(0, powerUpPrefabs.Count)], pos, Quaternion.identity, powerUpParent);
+                            spawned = true;
+                        }
+                    }
+                }
+            }
+            yield return new WaitForSeconds(Random.Range(spawnDelayMin, spawnDelayMax));
+        }
     }
 }
