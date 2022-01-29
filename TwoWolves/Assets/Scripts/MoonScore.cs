@@ -6,6 +6,8 @@ public class MoonScore : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    //Test test
+
     [Header("Score Variables")]
     [SerializeField] int currentScore;
     [SerializeField] int maxScore;
