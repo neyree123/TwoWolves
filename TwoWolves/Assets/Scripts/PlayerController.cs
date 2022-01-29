@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool move = false;
     private Vector2 moveDir;
     private Rigidbody2D rb;
     public float speed = 5f;
