@@ -24,4 +24,14 @@ public class PlayerController : MonoBehaviour
     {
         moveDir = value.Get<Vector2>();
     }
+
+    public void OnActionPurple()
+    {
+        Debug.Log("Action Purple");
+    }
+
+    public void OnActionYellow()
+    {
+        Debug.Log("Action Yellow");
+    }
 }
