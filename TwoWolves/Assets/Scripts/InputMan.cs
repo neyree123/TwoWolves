@@ -27,4 +27,14 @@ public class InputMan : MonoBehaviour
     {
         purpleWolf.OnMove(value); 
     }
+
+    private void OnPurpleAction(InputValue value)
+    {
+        purpleWolf.OnActionPurple();
+    }
+
+    private void OnYellowAction(InputValue value)
+    {
+        yellowWolf.OnActionYellow();
+    }
 }

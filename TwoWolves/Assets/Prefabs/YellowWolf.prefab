@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3486416310138401143}
   - component: {fileID: 3486416310138401129}
   - component: {fileID: 3486416310138401128}
+  - component: {fileID: 244088254}
   m_Layer: 0
   m_Name: YellowWolf
   m_TagString: Player
@@ -146,3 +147,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &244088254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3486416310138401139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff033b76a101efe46b229e47fc28924f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectParent: {fileID: 0}
+  dampeningConstant: 0.1
+  cooldown: 1
+  repulseForce: 500
+  repulseRange: 5
+  attractForce: 500
+  attractRange: 5

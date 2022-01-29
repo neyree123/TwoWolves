@@ -12,6 +12,7 @@ public class Forces : MonoBehaviour
     private float dampeningConstant;
     [SerializeField]
     private float cooldown;
+    private bool canUse;
     [Header("Repulsion")]
     [SerializeField]
     private float repulseForce;
@@ -34,19 +35,11 @@ public class Forces : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-            Attract(ColorMode.White);
-        }
-        if(Input.GetKeyDown(KeyCode.R))
-        {
-            Repulse(ColorMode.Black);
-        }
     }
 
     public void Attract(ColorMode color)
     {
-        if(color == ColorMode.White)
+        if(color == ColorMode.White && canUse)
         {
             foreach(Transform t in objectParent.whiteObjects)
             {
@@ -58,7 +51,7 @@ public class Forces : MonoBehaviour
                 }
             }
         }
-        else
+        else if(canUse)
         {
             foreach (Transform t in objectParent.blackObjects)
             {
@@ -74,7 +67,7 @@ public class Forces : MonoBehaviour
 
     public void Repulse(ColorMode color)
     {
-        if (color == ColorMode.White)
+        if (color == ColorMode.White && canUse )
         {
             foreach (Transform t in objectParent.whiteObjects)
             {
@@ -86,7 +79,7 @@ public class Forces : MonoBehaviour
                 }
             }
         }
-        else
+        else if(canUse)
         {
             foreach (Transform t in objectParent.blackObjects)
             {
@@ -100,9 +93,11 @@ public class Forces : MonoBehaviour
         }
     }
 
-    public IEnumerator Cooldown(float t)
+    public IEnumerator Cooldown()
     {
-        yield return new WaitForSeconds(t);
+        canUse = false;
+        yield return new WaitForSeconds(cooldown);
+        canUse = true;
     }
 
     private void OnDrawGizmosSelected()
