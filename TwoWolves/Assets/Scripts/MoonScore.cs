@@ -32,6 +32,7 @@ public class MoonScore : MonoBehaviour
     [SerializeField] float collisionRadius;
     Vector2 pos2D;
     public ObjectParent objectParent;
+    [SerializeField] GameObject borderMang;
 
     void Start()
     {
@@ -47,6 +48,9 @@ public class MoonScore : MonoBehaviour
         pos2D = new Vector2(objPos.x, objPos.y);
 
         objectParent = GameObject.Find("ObjectManager").GetComponent<ObjectParent>();
+
+        SetBorders bord = borderMang.GetComponent<SetBorders>();
+        bord.SetRelativePos(gameObject, SetBorders.Anchor.Center);
     }
 
     // Update is called once per frame
@@ -112,7 +116,6 @@ public class MoonScore : MonoBehaviour
     {
         yellowScore++;
         currentScore++;
-
     }
 
     void UpdatePurpleScore()
