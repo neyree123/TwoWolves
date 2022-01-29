@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MoonScore : MonoBehaviour
 {
@@ -112,28 +113,37 @@ public class MoonScore : MonoBehaviour
     {
         yellowScore++;
         currentScore++;
-
+        if(yellowScore > maxScore)
+        {
+            DetermineWinner();
+        }
     }
 
     void UpdatePurpleScore()
     {
         purpleScore++;
         currentScore--;
+        if (purpleScore > maxScore)
+        {
+            DetermineWinner();
+        }
     }
 
-    public void DetermineWinner(int score)
+    public void DetermineWinner()
     {
-        if(score == 0)
+        if(currentScore == 0)
         {
-            //Tie
+            GameInfo.winner = "No one";
         }
-        else if(score > 0)
+        else if(currentScore > 0)
         {
-            //Yellow Wins
+            GameInfo.winner = "Yeller";
         }
-        else if(score < 0)
+        else if(currentScore < 0)
         {
-            //Purple Wins
+            GameInfo.winner = "Purper";
         }
+
+        SceneManager.LoadScene("EndScene");
     }
 }
