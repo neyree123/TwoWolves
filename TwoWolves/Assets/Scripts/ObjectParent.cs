@@ -124,7 +124,7 @@ public class ObjectParent : MonoBehaviour
             maxTimeBeforeObjectSpawn = 2;
         }
 
-        Debug.Log("IncreaseSpawnRate");
+        //Debug.Log("IncreaseSpawnRate");
 
         if (timer < roundTimeTotal)
         {
