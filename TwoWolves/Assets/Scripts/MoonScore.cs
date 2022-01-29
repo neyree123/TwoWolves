@@ -53,6 +53,8 @@ public class MoonScore : MonoBehaviour
 
         UpdatePhaseColor();
         UpdateRotation();
+
+        TestForCollision();
     }
 
     /// <summary>
@@ -81,27 +83,34 @@ public class MoonScore : MonoBehaviour
     void TestForCollision()
     {
         //Grab the object with range
-        Collider2D obj = Physics2D.OverlapCircle(pos2D, collisionRadius, collisionLayer);
+        Collider2D[] objs = Physics2D.OverlapCircleAll(pos2D, collisionRadius, collisionLayer);
 
-        //Adjust score based on type of object
-
-        if(obj.CompareTag("White"))
+        foreach(Collider2D obj in objs)
         {
-            UpdateYellowScore();
-        }
-        else if(obj.CompareTag("Black"))
-        {
-            UpdatePurpleScore();
+            //Adjust score based on type of object
+            if (obj.CompareTag("White"))
+            {
+                UpdateYellowScore();
+            }
+            else if (obj.CompareTag("Black"))
+            {
+                UpdatePurpleScore();
+            }
+
+            //Get rid of the object
+            Destroy(obj.gameObject);
         }
 
-        //Get rid of the object
-        Destroy(obj);
+        
+
+
     }
 
     //Helper functions
     void UpdateYellowScore()
     {
         yellowScore++;
+        Debug.Log("Yellow Score: " + yellowScore);
         currentScore++;
 
     }
@@ -109,6 +118,7 @@ public class MoonScore : MonoBehaviour
     void UpdatePurpleScore()
     {
         purpleScore++;
+        Debug.Log("Purple Score: " + purpleScore);
         currentScore--;
     }
 }
