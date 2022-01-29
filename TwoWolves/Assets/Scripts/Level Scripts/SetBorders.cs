@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SetBorders : MonoBehaviour
 {
-    float vert;
+    public float vert;
     float horz;
     float scale;
 
@@ -15,12 +15,16 @@ public class SetBorders : MonoBehaviour
 
     public enum Anchor {TopLeft, Top, TopRight, Right, BottomRight, Bottom, BottomLeft, Left, Center};
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         //Grab the positions of the camera borders
         vert = Camera.main.orthographicSize;
         horz = vert * Screen.width / Screen.height;
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+     
 
         //Place the walls appropriately
 
@@ -64,6 +68,8 @@ public class SetBorders : MonoBehaviour
     /// <param name="distance">Distance from the point</param>
     public void SetRelativePos(GameObject obj, Anchor point, float distance = 0)
     {
+        //Debug.Log(obj.name + " is set to " + point);
+
         switch(point)
         {
             case Anchor.Bottom:
@@ -88,6 +94,7 @@ public class SetBorders : MonoBehaviour
 
             case Anchor.Top:
                 obj.transform.position = new Vector3(0, vert - distance, 0);
+                Debug.Log(obj.name + " has a ver of " + vert);
                 break;
 
             case Anchor.TopLeft:

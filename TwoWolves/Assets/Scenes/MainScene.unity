@@ -416,7 +416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3490780564357860346, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
       propertyPath: anchor
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3490780564357860346, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
       propertyPath: borderMang
@@ -620,6 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89e844c31e67b5439a8600d089c472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vert: 0
   borders:
   - {fileID: 2015383778}
   - {fileID: 481870131}
