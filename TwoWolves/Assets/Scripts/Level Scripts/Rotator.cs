@@ -9,6 +9,7 @@ public class Rotator : MonoBehaviour
     [SerializeField] float distance;
     float prevDis;
     [SerializeField] GameObject borderMang;
+    [SerializeField] SetBorders.Anchor anchor;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class Rotator : MonoBehaviour
         UpdateDistance();
 
         SetBorders bord = borderMang.GetComponent<SetBorders>();
-        bord.SetRelativePos(gameObject, SetBorders.Anchor.Center);
+        bord.SetRelativePos(gameObject, anchor);
     }
 
     // Update is called once per frame

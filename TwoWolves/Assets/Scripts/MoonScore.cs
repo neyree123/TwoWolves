@@ -34,6 +34,7 @@ public class MoonScore : MonoBehaviour
     Vector2 pos2D;
     public ObjectParent objectParent;
     [SerializeField] GameObject borderMang;
+    [SerializeField] SetBorders.Anchor anchor;
 
     void Start()
     {
@@ -45,13 +46,15 @@ public class MoonScore : MonoBehaviour
         purpleMat.color = purple;
         yellowMat.color = yellow;
 
+        SetBorders bord = borderMang.GetComponent<SetBorders>();
+        bord.SetRelativePos(gameObject, anchor);
+
         Vector3 objPos = gameObject.transform.position;
         pos2D = new Vector2(objPos.x, objPos.y);
 
         objectParent = GameObject.Find("ObjectManager").GetComponent<ObjectParent>();
 
-        SetBorders bord = borderMang.GetComponent<SetBorders>();
-        bord.SetRelativePos(gameObject, SetBorders.Anchor.Center);
+        
     }
 
     // Update is called once per frame
