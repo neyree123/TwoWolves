@@ -26,7 +26,6 @@ public class SetBorders : MonoBehaviour
 
         //Upper Wall
         scale = borders[0].transform.localScale.y / 2;
-        Debug.Log(scale);
 
         borders[0].transform.position = new Vector3(0, vert + scale, 0);
         borders[0].transform.localScale = new Vector3(horz * 2, 1, 1);

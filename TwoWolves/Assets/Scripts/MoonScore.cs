@@ -115,7 +115,6 @@ public class MoonScore : MonoBehaviour
     void UpdateYellowScore()
     {
         yellowScore++;
-        Debug.Log("Yellow Score: " + yellowScore);
         currentScore++;
 
     }
@@ -123,7 +122,6 @@ public class MoonScore : MonoBehaviour
     void UpdatePurpleScore()
     {
         purpleScore++;
-        Debug.Log("Purple Score: " + purpleScore);
         currentScore--;
     }
 }
