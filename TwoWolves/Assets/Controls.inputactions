@@ -22,7 +22,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Fire",
+                    "name": "ActionPurple",
                     "type": "Button",
                     "id": "40a4d35a-a519-4a4b-9f5e-7b68aa534280",
                     "expectedControlType": "Button",
@@ -159,18 +159,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Fire",
+                    "action": "ActionPurple",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "05f6913d-c316-48b2-a6bb-e225f14c7960",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Fire",
+                    "action": "ActionPurple",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -181,7 +181,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Touch",
-                    "action": "Fire",
+                    "action": "ActionPurple",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -192,7 +192,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Fire",
+                    "action": "ActionPurple",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -203,7 +203,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "XR",
-                    "action": "Fire",
+                    "action": "ActionPurple",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa3bd3a1-261c-4cb3-85e6-bf75e01f9af9",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "ActionPurple",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -230,7 +241,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Fire",
+                    "name": "ActionYellow",
                     "type": "Button",
                     "id": "e8ca14b7-679f-4fa3-a713-2214c0d99654",
                     "expectedControlType": "Button",
@@ -411,18 +422,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
-                    "action": "Fire",
+                    "action": "ActionYellow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "ce5351e4-d3c6-4659-8e01-f4fd657e1696",
-                    "path": "<Mouse>/leftButton",
+                    "path": "<Keyboard>/rightShift",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "Fire",
+                    "action": "ActionYellow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -433,7 +444,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Touch",
-                    "action": "Fire",
+                    "action": "ActionYellow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -444,7 +455,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Joystick",
-                    "action": "Fire",
+                    "action": "ActionYellow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -455,7 +466,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "XR",
-                    "action": "Fire",
+                    "action": "ActionYellow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c1b86950-7054-4f97-912f-a4e20e0128d8",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "ActionYellow",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
