@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 public class EventManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static EventManager instance;
+
+    private void Awake()
     {
-        
+        if (!instance)
+            instance = this;
+        else
+            Destroy(this);
     }
 
-    // Update is called once per frame
-    void Update()
+    public event Action EndGame;
+
+    public void TriggerEndGame()
     {
-        
+        EndGame?.Invoke();
     }
 }
