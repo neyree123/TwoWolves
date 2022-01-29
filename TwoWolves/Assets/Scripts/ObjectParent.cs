@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public enum ColorMode { White, Black }
 public class ObjectParent : MonoBehaviour
@@ -23,6 +24,8 @@ public class ObjectParent : MonoBehaviour
     public float minTimeBeforeObjectSpawn = 5;
     public float spawnChangeIncrement = 2;
 
+    public TextMeshProUGUI timerText;
+
     public float moonWidth = 2;
     public float mapWidth = 20f;
     public float mapHeight = 8f;
@@ -39,6 +42,8 @@ public class ObjectParent : MonoBehaviour
         //    SpawnObject(ColorMode.Black, Random.insideUnitCircle * 5);
         //}
 
+        timerText = GameObject.Find("Timer").GetComponent<TextMeshProUGUI>();
+
         StartCoroutine(SpawnObjectsOverTime());
         StartCoroutine(IncreaseSpawnRate());
     }
@@ -47,6 +52,20 @@ public class ObjectParent : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+
+        //Update Timer
+        int min = Mathf.FloorToInt((roundTimeTotal - timer) / 60);
+        int sec = Mathf.FloorToInt((roundTimeTotal - timer) % 60);
+
+        if (sec < 10)
+        {
+            timerText.text = min + ":0" + sec;
+        }
+        else
+        {
+            timerText.text = min + ":" + sec;
+        }
+
     }
 
     public void SpawnObject(ColorMode color, Vector2 pos)

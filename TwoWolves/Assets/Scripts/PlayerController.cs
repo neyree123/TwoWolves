@@ -29,10 +29,12 @@ public class PlayerController : MonoBehaviour
 
     public void OnActionPurple()
     {
-        forces.Attract(colorMode);
-
-        forces.Repulse(GetOppositeColor());
-        StartCoroutine(forces.Cooldown());
+        if (forces.canUse)
+        {
+            forces.Attract(ColorMode.Black);
+            forces.Repulse(ColorMode.White);
+            StartCoroutine(forces.Cooldown());
+        }
     }
 
     public void OnActionYellow()
