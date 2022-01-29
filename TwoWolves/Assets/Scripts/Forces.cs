@@ -12,7 +12,7 @@ public class Forces : MonoBehaviour
     private float dampeningConstant;
     [SerializeField]
     private float cooldown;
-    private bool canUse;
+    public bool canUse = true;
     [Header("Repulsion")]
     [SerializeField]
     private float repulseForce;
@@ -29,7 +29,7 @@ public class Forces : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        canUse = true;
     }
 
     // Update is called once per frame
