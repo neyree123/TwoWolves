@@ -5,16 +5,16 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool move = false;
     private Vector2 moveDir;
     private Rigidbody2D rb;
     public float speed = 5f;
-    private Animator anim;
+    Forces forces;
+    public ColorMode colorMode;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        forces = GetComponent<Forces>();
     }
 
     void FixedUpdate()
@@ -24,18 +24,31 @@ public class PlayerController : MonoBehaviour
 
     public void OnMove(InputValue value)
     {
-        anim.SetFloat("Speed", value.Get<Vector2>().magnitude);
-        Debug.Log("Speed: " + anim.GetFloat("Speed"));
         moveDir = value.Get<Vector2>();
     }
 
     public void OnActionPurple()
     {
-        Debug.Log("Action Purple");
+        if (forces.canUse)
+        {
+            forces.Attract(ColorMode.Black);
+            forces.Repulse(ColorMode.White);
+            StartCoroutine(forces.Cooldown());
+        }
     }
 
     public void OnActionYellow()
     {
-        Debug.Log("Action Yellow");
+        if (forces.canUse)
+        {
+            forces.Attract(ColorMode.White);
+            forces.Repulse(ColorMode.Black);
+            StartCoroutine(forces.Cooldown());
+        }
+    }
+
+    public ColorMode GetOppositeColor()
+    {
+        return colorMode == ColorMode.Black ? ColorMode.White : ColorMode.Black;
     }
 }
