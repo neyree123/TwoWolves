@@ -31,6 +31,7 @@ public class MoonScore : MonoBehaviour
     [SerializeField] LayerMask collisionLayer;
     [SerializeField] float collisionRadius;
     Vector2 pos2D;
+    public ObjectParent objectParent;
 
     void Start()
     {
@@ -44,6 +45,8 @@ public class MoonScore : MonoBehaviour
 
         Vector3 objPos = gameObject.transform.position;
         pos2D = new Vector2(objPos.x, objPos.y);
+
+        objectParent = GameObject.Find("ObjectManager").GetComponent<ObjectParent>();
     }
 
     // Update is called once per frame
@@ -91,10 +94,12 @@ public class MoonScore : MonoBehaviour
             if (obj.CompareTag("White"))
             {
                 UpdateYellowScore();
+                objectParent.whiteObjects.Remove(obj.transform);
             }
             else if (obj.CompareTag("Black"))
             {
                 UpdatePurpleScore();
+                objectParent.blackObjects.Remove(obj.transform);
             }
 
             //Get rid of the object

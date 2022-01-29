@@ -18,12 +18,16 @@ public class Forces : MonoBehaviour
     private float repulseForce;
     [SerializeField]
     private float repulseRange;
+    public GameObject purpleRepulsion;
+    public GameObject yellowRepulsion;
 
     [Header("Attract")]
     [SerializeField]
     private float attractForce;
     [SerializeField]
     private float attractRange;
+    public GameObject purpleAttraction;
+    public GameObject yellowAttraction;
 
 
     // Start is called before the first frame update
@@ -50,6 +54,7 @@ public class Forces : MonoBehaviour
                     t.GetComponent<Rigidbody2D>().AddForce(force);
                 }
             }
+            Instantiate(yellowAttraction, transform);
         }
         else if(canUse)
         {
@@ -62,6 +67,7 @@ public class Forces : MonoBehaviour
                     t.GetComponent<Rigidbody2D>().AddForce(force);
                 }
             }
+            Instantiate(purpleAttraction, transform);
         }
     }
 
@@ -78,6 +84,7 @@ public class Forces : MonoBehaviour
                     t.GetComponent<Rigidbody2D>().AddForce(force);
                 }
             }
+            Instantiate(yellowRepulsion,transform);
         }
         else if(canUse)
         {
@@ -90,6 +97,7 @@ public class Forces : MonoBehaviour
                     t.GetComponent<Rigidbody2D>().AddForce(force);
                 }
             }
+            Instantiate(purpleRepulsion,transform);
         }
     }
 
