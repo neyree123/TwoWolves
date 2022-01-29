@@ -7,18 +7,24 @@ using UnityEngine;
 public class Forces : MonoBehaviour
 {
     public ObjectParent objectParent;
-    [SerializeField]
-    private float attractForce;
-    [SerializeField]
-    private float repulseForce;
-
-    [SerializeField]
-    private float attractRange;
-    [SerializeField]
-    private float repulseRange;
 
     [SerializeField]
     private float dampeningConstant;
+    [SerializeField]
+    private float cooldown;
+    [Header("Repulsion")]
+    [SerializeField]
+    private float repulseForce;
+    [SerializeField]
+    private float repulseRange;
+
+    [Header("Attract")]
+    [SerializeField]
+    private float attractForce;
+    [SerializeField]
+    private float attractRange;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -75,7 +81,7 @@ public class Forces : MonoBehaviour
                 if (Vector2.Distance(transform.position, t.position) < repulseRange)
                 {
                     Vector2 dir = (transform.position - t.position).normalized;
-                    Vector2 force = dir * Mathf.Lerp(attractForce, 10, Vector2.Distance(transform.position, t.position) / repulseRange);
+                    Vector2 force = -dir * Mathf.Lerp(attractForce, 10, Vector2.Distance(transform.position, t.position) / repulseRange);
                     t.GetComponent<Rigidbody2D>().AddForce(force);
                 }
             }
@@ -87,11 +93,16 @@ public class Forces : MonoBehaviour
                 if (Vector2.Distance(transform.position, t.position) < repulseRange)
                 {
                     Vector2 dir = (transform.position - t.position).normalized;
-                    Vector2 force = dir * Mathf.Lerp(attractForce, 10, Vector2.Distance(transform.position, t.position) / repulseRange);
+                    Vector2 force = -dir * Mathf.Lerp(attractForce, 10, Vector2.Distance(transform.position, t.position) / repulseRange);
                     t.GetComponent<Rigidbody2D>().AddForce(force);
                 }
             }
         }
+    }
+
+    public IEnumerator Cooldown(float t)
+    {
+        yield return new WaitForSeconds(t);
     }
 
     private void OnDrawGizmosSelected()
