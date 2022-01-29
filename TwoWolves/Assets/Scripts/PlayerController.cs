@@ -45,8 +45,8 @@ public class PlayerController : MonoBehaviour
     {
         if (forces.canUse)
         {
-            forces.Attract(ColorMode.Black);
-            forces.Repulse(ColorMode.White);
+            forces.Attract(colorMode);
+            forces.Repulse(GetOppositeColor());
             StartCoroutine(forces.Cooldown());
         }
     }
@@ -55,8 +55,8 @@ public class PlayerController : MonoBehaviour
     {
         if (forces.canUse)
         {
-            forces.Attract(ColorMode.White);
-            forces.Repulse(ColorMode.Black);
+            forces.Attract(colorMode);
+            forces.Repulse(GetOppositeColor());
             StartCoroutine(forces.Cooldown());
         }
     }
