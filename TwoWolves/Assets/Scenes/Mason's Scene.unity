@@ -172,11 +172,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScore: 0
   maxScore: 100
+  yellowScore: 0
+  purpleScore: 0
   purple: {r: 0.86666673, g: 0, b: 1, a: 1}
   yellow: {r: 1, g: 0.92549026, b: 0, a: 1}
   phaseChanger: {fileID: 717413050}
   purpleSide: {fileID: 509202093}
   yellowSide: {fileID: 707317195}
+  collisionLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  collisionRadius: 2
 --- !u!1 &509202093
 GameObject:
   m_ObjectHideFlags: 0
