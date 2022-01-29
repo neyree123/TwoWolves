@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3486416310138401129}
   - component: {fileID: 3486416310138401128}
   - component: {fileID: 244088254}
+  - component: {fileID: 6798652987982489445}
   m_Layer: 0
   m_Name: YellowWolf
   m_TagString: Player
@@ -75,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.71826667, g: 0.754717, b: 0.33036664, a: 1}
+  m_Sprite: {fileID: 404194864667445833, guid: 4762759d0a5bd944fb2e989bf20acb91, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -138,7 +139,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.1833333, y: 0.5833333}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -165,9 +166,24 @@ MonoBehaviour:
   canUse: 1
   repulseForce: 500
   repulseRange: 5
-  purpleRepulsion: {fileID: 199333902326789081, guid: 604207a2fcaf22c42a42ef7b95ae3929, type: 3}
-  yellowRepulsion: {fileID: 6370193808397192340, guid: bd9631f5196a4f84291b56f9a6827464, type: 3}
   attractForce: 500
   attractRange: 5
-  purpleAttraction: {fileID: 236879474269570409, guid: 2dc805a7de8f00a4e8f8ab6f46c0197b, type: 3}
-  yellowAttraction: {fileID: 8099807793225417860, guid: 8c5f55ee7f1720f4db1b40b5ed66eb64, type: 3}
+--- !u!95 &6798652987982489445
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3486416310138401139}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ebdc674b841ad640ae56bdf7b041d15, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

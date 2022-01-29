@@ -30,6 +30,9 @@ public class ObjectParent : MonoBehaviour
     public float mapWidth = 20f;
     public float mapHeight = 8f;
 
+    public Vector3[] whiteInitialSpawnLocations;
+    public Vector3[] blackInitialSpawnLocations;
+
     [Header("PowerUp Spawning")]
     public float spawnDelayMin;
     public float spawnDelayMax;
@@ -43,14 +46,18 @@ public class ObjectParent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //for (int i = 0; i < 3; i++)
-        //{
-        //    SpawnObject(ColorMode.White, Random.insideUnitCircle * 5);
-        //}
-        //for (int i = 0; i < 3; i++)
-        //{
-        //    SpawnObject(ColorMode.Black, Random.insideUnitCircle * 5);
-        //}
+        whiteInitialSpawnLocations = new Vector3[3] { new Vector3(7.5f, 3f, 0), new Vector3(7.5f, -3f, 0), new Vector3(-5.5f, 0f, 0f) };
+
+        blackInitialSpawnLocations = new Vector3[3] { new Vector3(-7.5f, 3f, 0), new Vector3(-7.5f, -3f, 0), new Vector3(5.5f, 0f, 0f) };
+
+        for (int i = 0; i < 3; i++)
+        {
+            SpawnObject(ColorMode.White, whiteInitialSpawnLocations[i]);
+        }
+        for (int i = 0; i < 3; i++)
+        {
+            SpawnObject(ColorMode.Black, blackInitialSpawnLocations[i]);
+        }
 
         timerText = GameObject.Find("Timer").GetComponent<TextMeshProUGUI>();
 
@@ -123,13 +130,17 @@ public class ObjectParent : MonoBehaviour
 
     public IEnumerator SpawnObjectsOverTime()
     {
+        
+
+        yield return new WaitForSeconds(Random.Range(minTimeBeforeObjectSpawn, maxTimeBeforeObjectSpawn));
+
         //Find Spawn Locations
         bool purpleSpawned = false;
         bool yellowSpawned = false;
 
         while (!purpleSpawned)
         {
-            Vector3 purplePos = new Vector3(Random.Range(-(mapWidth/2), mapWidth / 2), Random.Range(-(mapHeight/2), mapHeight/2));
+            Vector3 purplePos = new Vector3(Random.Range(-(mapWidth / 2), mapWidth / 2), Random.Range(-(mapHeight / 2), mapHeight / 2));
 
             //Debug.Log(purplePos);
 
@@ -160,8 +171,6 @@ public class ObjectParent : MonoBehaviour
                 yellowSpawned = true;
             }
         }
-
-        yield return new WaitForSeconds(Random.Range(minTimeBeforeObjectSpawn, maxTimeBeforeObjectSpawn));
 
         if (timer < roundTimeTotal)
         {
