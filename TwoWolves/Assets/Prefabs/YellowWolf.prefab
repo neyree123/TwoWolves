@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3486416310138401143}
   - component: {fileID: 3486416310138401129}
   - component: {fileID: 3486416310138401128}
-  - component: {fileID: 244088254}
+  - component: {fileID: 6747214160316036547}
   m_Layer: 0
   m_Name: YellowWolf
   m_TagString: Player
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.71826667, g: 0.754717, b: 0.33036664, a: 1}
+  m_Sprite: {fileID: 404194864667445833, guid: b3435cb24c263cf4194c351bf68dfd5e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -138,7 +138,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.71, y: 0.35}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -147,22 +147,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &244088254
-MonoBehaviour:
+--- !u!95 &6747214160316036547
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3486416310138401139}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff033b76a101efe46b229e47fc28924f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectParent: {fileID: 0}
-  dampeningConstant: 0.1
-  cooldown: 1
-  repulseForce: 500
-  repulseRange: 5
-  attractForce: 500
-  attractRange: 5
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3c374af14e65f8a4cbdc43739ada3229, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
