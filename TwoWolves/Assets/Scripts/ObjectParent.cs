@@ -75,7 +75,11 @@ public class ObjectParent : MonoBehaviour
         int min = Mathf.FloorToInt((roundTimeTotal - timer) / 60);
         int sec = Mathf.FloorToInt((roundTimeTotal - timer) % 60);
 
-        if (sec < 10)
+        if (roundTimeTotal - timer <= 0)
+        {
+            timerText.text = "0:00";
+        }
+        else if(sec < 10)
         {
             timerText.text = min + ":0" + sec;
         }
