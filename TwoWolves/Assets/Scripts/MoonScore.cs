@@ -105,10 +105,6 @@ public class MoonScore : MonoBehaviour
             //Get rid of the object
             Destroy(obj.gameObject);
         }
-
-        
-
-
     }
 
     //Helper functions
@@ -123,5 +119,21 @@ public class MoonScore : MonoBehaviour
     {
         purpleScore++;
         currentScore--;
+    }
+
+    public void DetermineWinner(int score)
+    {
+        if(score == 0)
+        {
+            //Tie
+        }
+        else if(score > 0)
+        {
+            //Yellow Wins
+        }
+        else if(score < 0)
+        {
+            //Purple Wins
+        }
     }
 }
