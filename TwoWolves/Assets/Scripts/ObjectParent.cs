@@ -98,13 +98,13 @@ public class ObjectParent : MonoBehaviour
         GameObject g = Instantiate(objectPrefab, pos, Quaternion.identity, transform);
         if(color == ColorMode.White)
         {
-            g.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+            g.GetComponent<SpriteRenderer>().color = white;
             g.tag = "White";
             whiteObjects.Add(g.transform);
         }
         else
         {
-            g.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, 1f);
+            g.GetComponent<SpriteRenderer>().color = black;
             g.tag = "Black";
             blackObjects.Add(g.transform);
         }
