@@ -9,10 +9,12 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveDir;
     private Rigidbody2D rb;
     public float speed = 5f;
+    Forces forces;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        forces = GetComponent<Forces>();
     }
 
     void FixedUpdate()
@@ -27,11 +29,15 @@ public class PlayerController : MonoBehaviour
 
     public void OnActionPurple()
     {
-        Debug.Log("Action Purple");
+        forces.Attract(ColorMode.Black);
+        forces.Repulse(ColorMode.White);
+        StartCoroutine(forces.Cooldown());
     }
 
     public void OnActionYellow()
     {
-        Debug.Log("Action Yellow");
+        forces.Attract(ColorMode.White);
+        forces.Repulse(ColorMode.Black);
+        StartCoroutine(forces.Cooldown());
     }
 }
