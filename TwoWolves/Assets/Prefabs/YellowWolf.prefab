@@ -167,8 +167,12 @@ MonoBehaviour:
   canUse: 1
   repulseForce: 500
   repulseRange: 5
+  purpleRepulsion: {fileID: 236879474269570409, guid: 2dc805a7de8f00a4e8f8ab6f46c0197b, type: 3}
+  yellowRepulsion: {fileID: 8099807793225417860, guid: 8c5f55ee7f1720f4db1b40b5ed66eb64, type: 3}
   attractForce: 500
   attractRange: 5
+  purpleAttraction: {fileID: 199333902326789081, guid: 604207a2fcaf22c42a42ef7b95ae3929, type: 3}
+  yellowAttraction: {fileID: 6370193808397192340, guid: bd9631f5196a4f84291b56f9a6827464, type: 3}
 --- !u!95 &6798652987982489445
 Animator:
   serializedVersion: 3

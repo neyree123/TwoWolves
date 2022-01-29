@@ -59,6 +59,6 @@ public class SpeedUp : MonoBehaviour, IPowerUps
     {
         controller.speed *= speedMultiplier;
         yield return new WaitForSeconds(duration);
-        controller.speed = initialSpeed;
+        controller.speed /= speedMultiplier;
     }
 }

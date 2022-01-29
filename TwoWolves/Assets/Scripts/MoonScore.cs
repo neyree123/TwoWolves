@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MoonScore : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class MoonScore : MonoBehaviour
     [SerializeField] float collisionRadius;
     Vector2 pos2D;
     public ObjectParent objectParent;
+    [SerializeField] GameObject borderMang;
 
     void Start()
     {
@@ -47,6 +49,9 @@ public class MoonScore : MonoBehaviour
         pos2D = new Vector2(objPos.x, objPos.y);
 
         objectParent = GameObject.Find("ObjectManager").GetComponent<ObjectParent>();
+
+        SetBorders bord = borderMang.GetComponent<SetBorders>();
+        bord.SetRelativePos(gameObject, SetBorders.Anchor.Center);
     }
 
     // Update is called once per frame
@@ -105,25 +110,40 @@ public class MoonScore : MonoBehaviour
             //Get rid of the object
             Destroy(obj.gameObject);
         }
-
-        
-
-
     }
 
     //Helper functions
     void UpdateYellowScore()
     {
         yellowScore++;
-        Debug.Log("Yellow Score: " + yellowScore);
         currentScore++;
-
     }
 
     void UpdatePurpleScore()
     {
         purpleScore++;
-        Debug.Log("Purple Score: " + purpleScore);
         currentScore--;
+        if (purpleScore > maxScore)
+        {
+            DetermineWinner();
+        }
+    }
+
+    public void DetermineWinner()
+    {
+        if(currentScore == 0)
+        {
+            GameInfo.winner = "No one";
+        }
+        else if(currentScore > 0)
+        {
+            GameInfo.winner = "Yeller";
+        }
+        else if(currentScore < 0)
+        {
+            GameInfo.winner = "Purper";
+        }
+
+        SceneManager.LoadScene("EndScene");
     }
 }

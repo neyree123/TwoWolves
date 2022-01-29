@@ -14,6 +14,7 @@ public class ObjectParent : MonoBehaviour
     public List<Transform> whiteObjects;
     [SerializeField]
     GameObject objectPrefab;
+    private MoonScore moon;
 
     [Header("Spawn Manager Variables")]
     // Start is called before the first frame update
@@ -50,6 +51,7 @@ public class ObjectParent : MonoBehaviour
 
         blackInitialSpawnLocations = new Vector3[3] { new Vector3(-7.5f, 3f, 0), new Vector3(-7.5f, -3f, 0), new Vector3(5.5f, 0f, 0f) };
 
+        moon = GetComponentInParent<MoonScore>();
         for (int i = 0; i < 3; i++)
         {
             SpawnObject(ColorMode.White, whiteInitialSpawnLocations[i]);
@@ -75,7 +77,12 @@ public class ObjectParent : MonoBehaviour
         int min = Mathf.FloorToInt((roundTimeTotal - timer) / 60);
         int sec = Mathf.FloorToInt((roundTimeTotal - timer) % 60);
 
-        if (sec < 10)
+        if (roundTimeTotal - timer <= 0)
+        {
+            timerText.text = "0:00";
+            moon.DetermineWinner();
+        }
+        else if(sec < 10)
         {
             timerText.text = min + ":0" + sec;
         }
@@ -91,13 +98,13 @@ public class ObjectParent : MonoBehaviour
         GameObject g = Instantiate(objectPrefab, pos, Quaternion.identity, transform);
         if(color == ColorMode.White)
         {
-            g.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 1f);
+            g.GetComponent<SpriteRenderer>().color = white;
             g.tag = "White";
             whiteObjects.Add(g.transform);
         }
         else
         {
-            g.GetComponent<SpriteRenderer>().color = new Color(0f, 0f, 0f, 1f);
+            g.GetComponent<SpriteRenderer>().color = black;
             g.tag = "Black";
             blackObjects.Add(g.transform);
         }
@@ -120,7 +127,7 @@ public class ObjectParent : MonoBehaviour
             maxTimeBeforeObjectSpawn = 2;
         }
 
-        Debug.Log("IncreaseSpawnRate");
+        //Debug.Log("IncreaseSpawnRate");
 
         if (timer < roundTimeTotal)
         {

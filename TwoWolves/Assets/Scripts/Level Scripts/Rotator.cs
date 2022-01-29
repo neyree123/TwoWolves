@@ -8,12 +8,16 @@ public class Rotator : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float distance;
     float prevDis;
+    [SerializeField] GameObject borderMang;
 
     // Start is called before the first frame update
     void Start()
     {
         prevDis = distance;
         UpdateDistance();
+
+        SetBorders bord = borderMang.GetComponent<SetBorders>();
+        bord.SetRelativePos(gameObject, SetBorders.Anchor.Center);
     }
 
     // Update is called once per frame
