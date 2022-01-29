@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     public float speed = 5f;
     Forces forces;
+    public ColorMode colorMode;
 
     private void Start()
     {
@@ -29,15 +30,24 @@ public class PlayerController : MonoBehaviour
 
     public void OnActionPurple()
     {
-        forces.Attract(ColorMode.Black);
-        forces.Repulse(ColorMode.White);
+        forces.Attract(colorMode);
+
+        forces.Repulse(GetOppositeColor());
         StartCoroutine(forces.Cooldown());
     }
 
     public void OnActionYellow()
     {
-        forces.Attract(ColorMode.White);
-        forces.Repulse(ColorMode.Black);
-        StartCoroutine(forces.Cooldown());
+        if (forces.canUse)
+        {
+            forces.Attract(ColorMode.White);
+            forces.Repulse(ColorMode.Black);
+            StartCoroutine(forces.Cooldown());
+        }
+    }
+
+    public ColorMode GetOppositeColor()
+    {
+        return colorMode == ColorMode.Black ? ColorMode.White : ColorMode.Black;
     }
 }
