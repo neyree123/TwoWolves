@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  colorMode: 0
+  colorMode: 1
 --- !u!50 &5249239319648692894
 Rigidbody2D:
   serializedVersion: 4
