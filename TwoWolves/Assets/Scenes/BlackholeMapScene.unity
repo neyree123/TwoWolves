@@ -1256,6 +1256,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1454912146}
     - target: {fileID: 1841382872564441265, guid: b5d2f9f655a1540409ae43ae46373992, type: 3}
+      propertyPath: portalObject
+      value: 
+      objectReference: {fileID: 1841382872564441268, guid: 8245438a3b5c66b4a92f965b5005f28a, type: 3}
+    - target: {fileID: 1841382872564441265, guid: b5d2f9f655a1540409ae43ae46373992, type: 3}
       propertyPath: purpleTransform
       value: 
       objectReference: {fileID: 777231254}
@@ -2374,6 +2378,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1454912146}
     - target: {fileID: 1841382872564441265, guid: b5d2f9f655a1540409ae43ae46373992, type: 3}
+      propertyPath: portalObject
+      value: 
+      objectReference: {fileID: 1841382872564441268, guid: 8245438a3b5c66b4a92f965b5005f28a, type: 3}
+    - target: {fileID: 1841382872564441265, guid: b5d2f9f655a1540409ae43ae46373992, type: 3}
       propertyPath: purpleTransform
       value: 
       objectReference: {fileID: 777231254}
@@ -2381,6 +2389,14 @@ PrefabInstance:
       propertyPath: yellowTransform
       value: 
       objectReference: {fileID: 534417260}
+    - target: {fileID: 1841382872564441266, guid: b5d2f9f655a1540409ae43ae46373992, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841382872564441266, guid: b5d2f9f655a1540409ae43ae46373992, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1841382872564441267, guid: b5d2f9f655a1540409ae43ae46373992, type: 3}
       propertyPath: m_RootOrder
       value: 15
