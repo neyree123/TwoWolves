@@ -17,7 +17,9 @@ public class Blackhole : MonoBehaviour
     [SerializeField] SetBorders.Anchor anchor;
     public Vector3 offset;
 
-    public float portalTime = 1;
+    public GameObject portalObject;
+
+    List<GameObject> openPortals = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -62,20 +64,18 @@ public class Blackhole : MonoBehaviour
         {
             ColorMode cm = collision.gameObject.GetComponent<PlayerController>().colorMode;
 
-            if (cm == ColorMode.White)
+            if (cm == ColorMode.Black)
             {
                 yellowTransform.position = yellowSpawnPosition;
+                GameObject temp = Instantiate(portalObject, yellowSpawnPosition, Quaternion.identity);
             }
             else
             {
                 purpleTransform.position = purpleSpawnPosition;
+                GameObject temp = Instantiate(portalObject, purpleSpawnPosition, Quaternion.identity);
             }
         }
     }
 
-    public IEnumerator SpawnPortal()
-    {
-        yield return new WaitForSeconds(portalTime);
-    }
 
 }
