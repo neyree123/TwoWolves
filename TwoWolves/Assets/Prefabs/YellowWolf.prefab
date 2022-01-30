@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 0.32523, y: 0.32523, z: 0.32523}
   m_Children: []
   m_Father: {fileID: 3486416310138401142}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5700931225342338951
 SpriteRenderer:
@@ -116,6 +116,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2383489557668544849}
+  - {fileID: 8747917571875631094}
   - {fileID: 1917738066159029455}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -276,6 +277,72 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &569143106193927898
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3486416310138401142}
+    m_Modifications:
+    - target: {fileID: 9115523197671194924, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115523197671194924, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.4551743
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115523197671194924, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5348028
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115523197671194924, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115523197671194924, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115523197671194924, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115523197671194924, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115523197671194924, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115523197671194924, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115523197671194924, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115523197671194924, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115523197671194927, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+      propertyPath: m_Name
+      value: WolfTrailParticle Purple
+      objectReference: {fileID: 0}
+    - target: {fileID: 9115523197671194927, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+--- !u!4 &8747917571875631094 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9115523197671194924, guid: 539f041a6732b1c4c8e733b11b56456a, type: 3}
+  m_PrefabInstance: {fileID: 569143106193927898}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7560783657698839926
 PrefabInstance:
   m_ObjectHideFlags: 0
