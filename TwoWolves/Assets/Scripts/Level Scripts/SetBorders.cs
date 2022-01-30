@@ -100,7 +100,6 @@ public class SetBorders : MonoBehaviour
 
             case Anchor.TopLeft:
                 obj.transform.position = new Vector3(-horz + distance, vert - distance, 0);
-                Debug.Log(obj.name + obj.transform.position);
                 break;
 
             case Anchor.TopRight:

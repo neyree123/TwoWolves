@@ -432,11 +432,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &347104214 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1757331285658913625, guid: a73f711a9acbabf47be8a74921414452, type: 3}
-  m_PrefabInstance: {fileID: 1198838254}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &376575403
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,7 +685,7 @@ MonoBehaviour:
   attractRange: 0
   purpleAttraction: {fileID: 236879474269570409, guid: 2dc805a7de8f00a4e8f8ab6f46c0197b, type: 3}
   yellowAttraction: {fileID: 8099807793225417860, guid: 8c5f55ee7f1720f4db1b40b5ed66eb64, type: 3}
-  cancelImage: {fileID: 1734240633}
+  cancelImage: {fileID: 0}
 --- !u!114 &793333209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -900,6 +895,10 @@ PrefabInstance:
       propertyPath: objectParent
       value: 
       objectReference: {fileID: 839170314}
+    - target: {fileID: 1757331285658913625, guid: a73f711a9acbabf47be8a74921414452, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3486416310138401139, guid: a73f711a9acbabf47be8a74921414452, type: 3}
       propertyPath: m_Name
       value: YellowWolf
@@ -1011,6 +1010,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5249239319648692867, guid: ef39a294a6a2c224ea2fb59361116c76, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5798756507332247983, guid: ef39a294a6a2c224ea2fb59361116c76, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1136,7 +1139,7 @@ MonoBehaviour:
   attractRange: 0
   purpleAttraction: {fileID: 236879474269570409, guid: 2dc805a7de8f00a4e8f8ab6f46c0197b, type: 3}
   yellowAttraction: {fileID: 8099807793225417860, guid: 8c5f55ee7f1720f4db1b40b5ed66eb64, type: 3}
-  cancelImage: {fileID: 347104214}
+  cancelImage: {fileID: 0}
 --- !u!1 &1365851248
 GameObject:
   m_ObjectHideFlags: 0
@@ -2064,12 +2067,20 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8635354581545469624, guid: 21d140321e3f34743b4d00b88cbaee04, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635354581545469624, guid: 21d140321e3f34743b4d00b88cbaee04, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8635354581545469624, guid: 21d140321e3f34743b4d00b88cbaee04, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 8635354581545469624, guid: 21d140321e3f34743b4d00b88cbaee04, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 8635354581545469624, guid: 21d140321e3f34743b4d00b88cbaee04, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2081,15 +2092,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8635354581545469624, guid: 21d140321e3f34743b4d00b88cbaee04, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8635354581545469624, guid: 21d140321e3f34743b4d00b88cbaee04, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8635354581545469624, guid: 21d140321e3f34743b4d00b88cbaee04, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8635354581545469624, guid: 21d140321e3f34743b4d00b88cbaee04, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2106,10 +2117,6 @@ PrefabInstance:
     - target: {fileID: 8635354581545469626, guid: 21d140321e3f34743b4d00b88cbaee04, type: 3}
       propertyPath: m_Name
       value: Background
-      objectReference: {fileID: 0}
-    - target: {fileID: 8635354581545469627, guid: 21d140321e3f34743b4d00b88cbaee04, type: 3}
-      propertyPath: m_SortingOrder
-      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21d140321e3f34743b4d00b88cbaee04, type: 3}
