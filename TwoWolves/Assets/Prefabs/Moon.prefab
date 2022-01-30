@@ -127,6 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   white: {r: 0.9843138, g: 0.9568628, b: 0.427451, a: 1}
   black: {r: 0.6, g: 0.54901963, b: 0.9215687, a: 1}
+  yellowSprite: {fileID: 21300000, guid: 68bf8d4e6f135a14f84530e6cd314ba8, type: 3}
+  purpleSprite: {fileID: 21300000, guid: 2fbd389e19ea35a45b2d222464d8bf0b, type: 3}
   blackObjects: []
   whiteObjects: []
   objectPrefab: {fileID: 7652340531732688399, guid: d9fe9c47ae4e81440a8819fed871fcad, type: 3}
@@ -140,6 +142,7 @@ MonoBehaviour:
   moonWidth: 2
   mapWidth: 20
   mapHeight: 8
+  setBorders: {fileID: 0}
   whiteInitialSpawnLocations:
   - {x: 1, y: 2, z: 0}
   - {x: 5, y: 2, z: 0}

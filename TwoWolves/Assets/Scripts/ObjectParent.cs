@@ -10,6 +10,10 @@ public class ObjectParent : MonoBehaviour
     Color white;
     [SerializeField]
     Color black;
+    [SerializeField]
+    Sprite yellowSprite;
+    [SerializeField]
+    Sprite purpleSprite;
     public List<Transform> blackObjects;
     public List<Transform> whiteObjects;
     [SerializeField]
@@ -106,13 +110,13 @@ public class ObjectParent : MonoBehaviour
         GameObject g = Instantiate(objectPrefab, pos, Quaternion.identity, transform);
         if(color == ColorMode.White)
         {
-            g.GetComponent<SpriteRenderer>().color = white;
+            g.GetComponent<SpriteRenderer>().sprite = yellowSprite;
             g.tag = "White";
             whiteObjects.Add(g.transform);
         }
         else
         {
-            g.GetComponent<SpriteRenderer>().color = black;
+            g.GetComponent<SpriteRenderer>().sprite = purpleSprite;
             g.tag = "Black";
             blackObjects.Add(g.transform);
         }
