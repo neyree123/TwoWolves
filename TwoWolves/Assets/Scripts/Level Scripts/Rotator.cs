@@ -25,9 +25,13 @@ public class Rotator : MonoBehaviour
         UpdateDistance();
 
         //Set connection for the anchor points
-        SetBorders bord = borderMang.GetComponent<SetBorders>();
-        bord.SetRelativePos(gameObject, anchor, distanceFromAnchor, offset);
 
+        if(!borderMang)
+        {
+            SetBorders bord = borderMang.GetComponent<SetBorders>();
+            bord.SetRelativePos(gameObject, anchor, distanceFromAnchor, offset);
+        }
+      
         //Set direction of the rotation
         if (direction == Direction.Clockwise)
             speed *= 1;
