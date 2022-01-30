@@ -29,16 +29,29 @@ public class Forces : MonoBehaviour
     public GameObject purpleAttraction;
     public GameObject yellowAttraction;
 
-
+    public GameObject cancelImage;
     // Start is called before the first frame update
     void Start()
     {
-        canUse = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+
+    }
+    public void AttractPlayer(Transform playerTransform, float playerAttractForce)
+    {
+        if (Vector2.Distance(transform.position, playerTransform.position) < attractRange)
+        {
+            Vector2 dir = (transform.position - playerTransform.position).normalized;
+            Vector2 force = dir * Mathf.Lerp(playerAttractForce, 10, Vector2.Distance(transform.position, playerTransform.position) / attractRange);
+            playerTransform.GetComponent<Rigidbody2D>().AddForce(force);
+
+            Debug.Log("Drag Player");
+
+        }
     }
 
     public void Attract(ColorMode color)
@@ -104,7 +117,11 @@ public class Forces : MonoBehaviour
     public IEnumerator Cooldown()
     {
         canUse = false;
+        cancelImage.SetActive(true);
+
         yield return new WaitForSeconds(cooldown);
+
+        cancelImage.SetActive(false);
         canUse = true;
     }
 
