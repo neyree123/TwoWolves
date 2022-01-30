@@ -272,6 +272,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &229073210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 229073211}
+  - component: {fileID: 229073213}
+  - component: {fileID: 229073212}
+  m_Layer: 5
+  m_Name: Text (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &229073211
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229073210}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.29298902, y: 0.29298902, z: 0.29298902}
+  m_Children: []
+  m_Father: {fileID: 545585727}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 529, y: -291}
+  m_SizeDelta: {x: 815.9684, y: 338.72476}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &229073212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229073210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 4beb055f07aaff244873dec698d0363e, type: 3}
+    m_FontSize: 300
+    m_FontStyle: 1
+    m_BestFit: 1
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 2
+    m_AlignByGeometry: 0
+    m_RichText: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Get your color objects into the Moon!
+--- !u!222 &229073213
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229073210}
+  m_CullTransparentMesh: 0
 --- !u!1 &291443675
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,14 +693,14 @@ RectTransform:
   m_GameObject: {fileID: 544456516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3978162, y: 1.6779338, z: 1.6779338}
+  m_LocalScale: {x: 3.1036673, y: 1.532675, z: 1.532675}
   m_Children: []
   m_Father: {fileID: 545585727}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -397, y: 305}
+  m_AnchoredPosition: {x: -372, y: 444.00006}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &544456518
@@ -780,6 +859,7 @@ RectTransform:
   - {fileID: 1575353868}
   - {fileID: 1750060695}
   - {fileID: 544456517}
+  - {fileID: 229073211}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1044,14 +1124,14 @@ RectTransform:
   m_GameObject: {fileID: 1575353867}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8174442, y: 0.8174442, z: 0.8174442}
+  m_LocalScale: {x: 0.74667805, y: 0.74667805, z: 0.74667805}
   m_Children: []
   m_Father: {fileID: 545585727}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 117.00001, y: -221.00008}
+  m_AnchoredPosition: {x: 142, y: -81.99999}
   m_SizeDelta: {x: 815.9684, y: 338.72476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1575353869
@@ -1091,10 +1171,10 @@ MonoBehaviour:
 
     the Purple Wolf.
 
-    Use LeftShift to attract
-    Purple Boxes
+    Use LeftShift/E to attract
+    Yellow Boxes
 
-    and Repulse Yellow Boxes'
+    and Repulse Purple Boxes'
 --- !u!222 &1575353870
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1130,14 +1210,14 @@ RectTransform:
   m_GameObject: {fileID: 1750060694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3978162, y: 1.6779338, z: 1.6779338}
+  m_LocalScale: {x: 3.1036673, y: 1.532675, z: 1.532675}
   m_Children: []
   m_Father: {fileID: 545585727}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -395.00003, y: -129.00008}
+  m_AnchoredPosition: {x: -370.00003, y: 10.000011}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1750060696
@@ -1280,14 +1360,14 @@ RectTransform:
   m_GameObject: {fileID: 2108783472}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8174442, y: 0.8174442, z: 0.8174442}
+  m_LocalScale: {x: 0.74667805, y: 0.74667805, z: 0.74667805}
   m_Children: []
   m_Father: {fileID: 545585727}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 82.99996, y: 197.99992}
+  m_AnchoredPosition: {x: 108, y: 337}
   m_SizeDelta: {x: 815.9684, y: 338.72476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2108783474
@@ -1323,8 +1403,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Use IJKL / Arrow Keys\n to Move the Yellow Wolf\nUse RightShift to attract
-    the YellowBoxes\nand Repulse the PurpleBoxes"
+  m_Text: "Use IJKL / Arrow Keys\n to Move the Yellow Wolf\nUse RightShift/O to attract
+    the PurpleBoxes\nand Repulse the YellowBoxes"
 --- !u!222 &2108783475
 CanvasRenderer:
   m_ObjectHideFlags: 0
