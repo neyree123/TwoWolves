@@ -475,6 +475,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89e844c31e67b5439a8600d089c472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vert: 0
+  horz: 0
   borders:
   - {fileID: 1008690743}
   - {fileID: 1902505109}
@@ -779,6 +781,10 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 1547112262}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: setBorders
+      value: 
+      objectReference: {fileID: 311734335}
     - target: {fileID: 3490780564357860344, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
       propertyPath: m_Name
       value: Moon

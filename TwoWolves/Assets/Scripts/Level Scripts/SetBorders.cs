@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SetBorders : MonoBehaviour
 {
-    float vert;
-    float horz;
+    public float vert;
+    public float horz;
     float scale;
 
     [SerializeField]GameObject[] borders;

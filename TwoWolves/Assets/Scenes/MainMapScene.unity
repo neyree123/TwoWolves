@@ -622,6 +622,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 982205615}
     - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: setBorders
+      value: 
+      objectReference: {fileID: 532205013}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
       propertyPath: blackInitialSpawnLocations.Array.data[0].x
       value: -7.5
       objectReference: {fileID: 0}
@@ -879,6 +883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89e844c31e67b5439a8600d089c472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vert: 0
+  horz: 0
   borders:
   - {fileID: 2015383778}
   - {fileID: 481870131}

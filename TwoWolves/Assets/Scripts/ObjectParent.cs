@@ -28,8 +28,11 @@ public class ObjectParent : MonoBehaviour
     public TextMeshProUGUI timerText;
 
     public float moonWidth = 2;
-    public float mapWidth = 20f;
-    public float mapHeight = 8f;
+    public float mapWidth;
+    public float mapHeight;
+
+    [SerializeField]
+    SetBorders setBorders;
 
     public Vector3[] whiteInitialSpawnLocations;
     public Vector3[] blackInitialSpawnLocations;
@@ -62,6 +65,9 @@ public class ObjectParent : MonoBehaviour
         {
             SpawnObject(ColorMode.Black, blackInitialSpawnLocations[i]);
         }
+
+        mapHeight = setBorders.vert;
+        mapWidth = setBorders.horz;
 
         timerText = GameObject.Find("Timer").GetComponent<TextMeshProUGUI>();
 
