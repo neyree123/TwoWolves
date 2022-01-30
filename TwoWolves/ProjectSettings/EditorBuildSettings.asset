@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ControlsScreen.unity
     guid: f4b197088a3bb6c43ae7976eafec244a
   - enabled: 1
+    path: Assets/Scenes/PowerUpScreen.unity
+    guid: c3a28b52440405341a59ff913b452232
+  - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: c09ec8f10df0e7c4a917769954f25bee
   - enabled: 1
