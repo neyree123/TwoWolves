@@ -48,7 +48,6 @@ public class MoonScore : MonoBehaviour
 
         SetBorders bord = borderMang.GetComponent<SetBorders>();
 
-        Debug.Log(bord.vert);
         bord.SetRelativePos(gameObject, anchor);
 
         Vector3 objPos = gameObject.transform.position;

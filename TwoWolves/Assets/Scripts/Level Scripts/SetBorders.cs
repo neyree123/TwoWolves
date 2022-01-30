@@ -12,8 +12,12 @@ public class SetBorders : MonoBehaviour
 
     [SerializeField] GameObject[] players;
     [SerializeField] float distanceFromWall;
+    //[SerializeField] float offset;
 
     public enum Anchor {TopLeft, Top, TopRight, Right, BottomRight, Bottom, BottomLeft, Left, Center};
+
+    [SerializeField] Anchor yellowAnchor;
+    [SerializeField] Anchor purpleAnchor;
 
     private void Awake()
     {
@@ -24,8 +28,7 @@ public class SetBorders : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-     
-
+    
         //Place the walls appropriately
 
         //Upper Wall
@@ -38,9 +41,8 @@ public class SetBorders : MonoBehaviour
         SetRelativePos(borders[1], Anchor.Right, -scale);
         borders[1].transform.localScale = new Vector3(1, vert * 2, 1);
 
-        //Adjust player 2 Pos
-        SetRelativePos(players[1], Anchor.Right, distanceFromWall);
-        //players[1].transform.position = new Vector3(horz - distanceFromWall, 0, 0);
+        //Adjust Yellow player 2 Pos
+        SetRelativePos(players[1], yellowAnchor, distanceFromWall);
 
         //Lower Wall
         SetRelativePos(borders[2], Anchor.Bottom, -scale);
@@ -50,8 +52,8 @@ public class SetBorders : MonoBehaviour
         SetRelativePos(borders[3], Anchor.Left, -scale);
         borders[3].transform.localScale = new Vector3(1, vert * 2, 1);
 
-        //Adjust Player 1 Pos
-        SetRelativePos(players[0], Anchor.Left, distanceFromWall);
+        //Adjust Purple Player 1 Pos
+        SetRelativePos(players[0], purpleAnchor, distanceFromWall);
     }
 
     // Update is called once per frame
@@ -66,14 +68,14 @@ public class SetBorders : MonoBehaviour
     /// <param name="obj">Gameobject being attached</param>
     /// <param name="point">Part of the border to attach to</param>
     /// <param name="distance">Distance from the point</param>
-    public void SetRelativePos(GameObject obj, Anchor point, float distance = 0)
+    public void SetRelativePos(GameObject obj, Anchor point, float distance = 0, float offset = 0)
     {
         //Debug.Log(obj.name + " is set to " + point);
 
         switch(point)
         {
             case Anchor.Bottom:
-                obj.transform.position = new Vector3(0, -vert + distance, 0);
+                obj.transform.position = new Vector3(offset, -vert + distance, 0);
                 break;
 
             case Anchor.BottomLeft:
@@ -85,16 +87,15 @@ public class SetBorders : MonoBehaviour
                 break;
 
             case Anchor.Left:
-                obj.transform.position = new Vector3(-horz + distance, 0, 0);
+                obj.transform.position = new Vector3(-horz + distance, offset, 0);
                 break;
 
             case Anchor.Right:
-                obj.transform.position = new Vector3(horz - distance, 0, 0);
+                obj.transform.position = new Vector3(horz - distance, offset, 0);
                 break;
 
             case Anchor.Top:
-                obj.transform.position = new Vector3(0, vert - distance, 0);
-                Debug.Log(obj.name + " has a ver of " + vert);
+                obj.transform.position = new Vector3(offset, vert - distance, 0);
                 break;
 
             case Anchor.TopLeft:
