@@ -9,12 +9,12 @@ public class Blackhole : MonoBehaviour
     public Transform yellowTransform;
 
     public float playerAttractForce = 10000;
-
-    private Vector3 purpleSpawnPosition;
-    private Vector3 yellowSpawnPosition;
-
-    [SerializeField] GameObject borderMang;
-    [SerializeField] SetBorders.Anchor anchor;
+   
+   private Vector3 purpleSpawnPosition;
+   private Vector3 yellowSpawnPosition;
+   
+   [SerializeField] GameObject borderMang;
+   [SerializeField] SetBorders.Anchor anchor;
     public Vector3 offset;
 
     public float portalTime = 1;
