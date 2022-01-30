@@ -29,16 +29,17 @@ public class Forces : MonoBehaviour
     public GameObject purpleAttraction;
     public GameObject yellowAttraction;
 
-
+    public GameObject cancelImage;
     // Start is called before the first frame update
     void Start()
     {
-        canUse = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+
     }
 
     public void Attract(ColorMode color)
@@ -104,7 +105,11 @@ public class Forces : MonoBehaviour
     public IEnumerator Cooldown()
     {
         canUse = false;
+        cancelImage.SetActive(true);
+
         yield return new WaitForSeconds(cooldown);
+
+        cancelImage.SetActive(false);
         canUse = true;
     }
 
