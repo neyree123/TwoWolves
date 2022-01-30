@@ -62,7 +62,6 @@ public class MoonScore : MonoBehaviour
     void Update()
     {      
         currentScore = Mathf.Clamp(currentScore, -maxScore, maxScore);
-
         UpdatePhaseColor();
         UpdateRotation();
 
@@ -121,13 +120,17 @@ public class MoonScore : MonoBehaviour
     {
         yellowScore++;
         currentScore++;
+        if(currentScore >= maxScore)
+        {
+            DetermineWinner();
+        }
     }
 
     void UpdatePurpleScore()
     {
         purpleScore++;
         currentScore--;
-        if (purpleScore > maxScore)
+        if (currentScore <= -maxScore)
         {
             DetermineWinner();
         }

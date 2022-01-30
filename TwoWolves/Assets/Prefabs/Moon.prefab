@@ -125,29 +125,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14b16437b8213a24bbf50c79024893f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  white: {r: 0.9843138, g: 0.9568628, b: 0.427451, a: 0}
-  black: {r: 0.6, g: 0.54901963, b: 0.9215687, a: 0}
+  white: {r: 0.9843138, g: 0.9568628, b: 0.427451, a: 1}
+  black: {r: 0.6, g: 0.54901963, b: 0.9215687, a: 1}
   blackObjects: []
   whiteObjects: []
   objectPrefab: {fileID: 7652340531732688399, guid: d9fe9c47ae4e81440a8819fed871fcad, type: 3}
-  roundTimeTotal: 50
+  roundTimeTotal: 105
   timeBeforeSpawnRateIncrease: 20
   timer: 0
-  maxTimeBeforeObjectSpawn: 10
-  minTimeBeforeObjectSpawn: 5
+  maxTimeBeforeObjectSpawn: 7
+  minTimeBeforeObjectSpawn: 3
   spawnChangeIncrement: 2
   timerText: {fileID: 0}
   moonWidth: 2
   mapWidth: 20
   mapHeight: 8
-  whiteInitialSpawnLocations: []
-  blackInitialSpawnLocations: []
+  whiteInitialSpawnLocations:
+  - {x: 1, y: 2, z: 0}
+  - {x: 5, y: 2, z: 0}
+  - {x: -3, y: 2, z: 0}
+  blackInitialSpawnLocations:
+  - {x: -1, y: 2, z: 0}
+  - {x: -5, y: 2, z: 0}
+  - {x: 3, y: 2, z: 0}
   spawnDelayMin: 5
   spawnDelayMax: 10
   minSpawnAmount: 1
   maxSpawnAmount: 2
   powerUpParent: {fileID: 8343277890219533141}
-  maxCurrentAmount: 5
+  maxCurrentAmount: 3
   powerUpPrefabs:
   - {fileID: 2715670358135796068, guid: d0d5e5662f202d046accdd33223585f4, type: 3}
   - {fileID: 1022751106526627209, guid: 1f7c37f3d53b92649a6df5429dce6d6f, type: 3}
@@ -222,7 +228,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 0.92539847, b: 0, a: 1}
   m_FlipX: 0
@@ -304,7 +310,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 1, g: 0.9175284, b: 0, a: 1}
   m_FlipX: 0
@@ -461,6 +467,8 @@ MonoBehaviour:
     m_Bits: 64
   collisionRadius: 1.4
   objectParent: {fileID: 1856641863}
+  borderMang: {fileID: 0}
+  anchor: 5
 --- !u!1 &3490780564525977732
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +539,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.44313726, g: 0.30588236, b: 0.7058824, a: 1}
   m_FlipX: 0
