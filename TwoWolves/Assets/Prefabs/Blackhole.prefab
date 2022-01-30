@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1841382872564441269}
   - component: {fileID: 1841382872564441265}
   - component: {fileID: 1841382872564441264}
+  - component: {fileID: 391459446}
   m_Layer: 0
   m_Name: Blackhole
   m_TagString: Untagged
@@ -74,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.38823533, g: 0.36078432, b: 0.36078432, a: 0.78039217}
+  m_Sprite: {fileID: 1659985312132837270, guid: 956bb56809eb5fc44b584a45be407fa9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78039217}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -142,3 +143,23 @@ MonoBehaviour:
   attractRange: 4
   purpleAttraction: {fileID: 236879474269570409, guid: 2dc805a7de8f00a4e8f8ab6f46c0197b, type: 3}
   yellowAttraction: {fileID: 8099807793225417860, guid: 8c5f55ee7f1720f4db1b40b5ed66eb64, type: 3}
+  cancelImage: {fileID: 0}
+--- !u!95 &391459446
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841382872564441268}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fd9ad829409e24b47b00c8f78f459c0f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
