@@ -40,6 +40,18 @@ public class Forces : MonoBehaviour
     void Update()
     {
     }
+    public void AttractPlayer(Transform playerTransform, float playerAttractForce)
+    {
+        if (Vector2.Distance(transform.position, playerTransform.position) < attractRange)
+        {
+            Vector2 dir = (transform.position - playerTransform.position).normalized;
+            Vector2 force = dir * Mathf.Lerp(playerAttractForce, 10, Vector2.Distance(transform.position, playerTransform.position) / attractRange);
+            playerTransform.GetComponent<Rigidbody2D>().AddForce(force);
+
+            Debug.Log("Drag Player");
+
+        }
+    }
 
     public void Attract(ColorMode color)
     {

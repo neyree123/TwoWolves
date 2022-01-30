@@ -17,8 +17,8 @@ public class Rotator : MonoBehaviour
         prevDis = distance;
         UpdateDistance();
 
-        SetBorders bord = borderMang.GetComponent<SetBorders>();
-        bord.SetRelativePos(gameObject, anchor);
+        //SetBorders bord = borderMang.GetComponent<SetBorders>();
+        //bord.SetRelativePos(gameObject, anchor);
     }
 
     // Update is called once per frame
