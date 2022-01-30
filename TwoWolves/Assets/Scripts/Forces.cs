@@ -117,11 +117,20 @@ public class Forces : MonoBehaviour
     public IEnumerator Cooldown()
     {
         canUse = false;
-        cancelImage.SetActive(true);
+
+        if (cancelImage != null)
+        {
+            cancelImage.SetActive(true);
+        }
+
 
         yield return new WaitForSeconds(cooldown);
 
-        cancelImage.SetActive(false);
+        if (cancelImage != null)
+        {
+            cancelImage.SetActive(false);
+        }
+        
         canUse = true;
     }
 
