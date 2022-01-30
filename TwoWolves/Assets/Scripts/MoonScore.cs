@@ -148,6 +148,6 @@ public class MoonScore : MonoBehaviour
             GameInfo.winner = "Purper";
         }
 
-        SceneManager.LoadScene("EndScene");
+        SceneManager.LoadScene("VictoryScreen");
     }
 }

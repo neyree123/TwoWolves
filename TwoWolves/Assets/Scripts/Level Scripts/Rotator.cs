@@ -26,11 +26,11 @@ public class Rotator : MonoBehaviour
 
         //Set connection for the anchor points
 
-        if(!borderMang)
-        {
+        //if(!borderMang)
+        //{
             SetBorders bord = borderMang.GetComponent<SetBorders>();
             bord.SetRelativePos(gameObject, anchor, distanceFromAnchor, offset);
-        }
+        //}
       
         //Set direction of the rotation
         if (direction == Direction.Clockwise)
