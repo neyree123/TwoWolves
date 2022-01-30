@@ -47,16 +47,18 @@ public class ObjectParent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        whiteInitialSpawnLocations = new Vector3[3] { new Vector3(7.5f, 3f, 0), new Vector3(7.5f, -3f, 0), new Vector3(-5.5f, 0f, 0f) };
+        if(whiteInitialSpawnLocations.Length <= 0)
+            whiteInitialSpawnLocations = new Vector3[3] { new Vector3(7.5f, 3f, 0), new Vector3(7.5f, -3f, 0), new Vector3(-5.5f, 0f, 0f) };
 
-        blackInitialSpawnLocations = new Vector3[3] { new Vector3(-7.5f, 3f, 0), new Vector3(-7.5f, -3f, 0), new Vector3(5.5f, 0f, 0f) };
+        if(blackInitialSpawnLocations.Length <= 0)
+            blackInitialSpawnLocations = new Vector3[3] { new Vector3(-7.5f, 3f, 0), new Vector3(-7.5f, -3f, 0), new Vector3(5.5f, 0f, 0f) };
 
         moon = GetComponentInParent<MoonScore>();
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < whiteInitialSpawnLocations.Length; i++)
         {
             SpawnObject(ColorMode.White, whiteInitialSpawnLocations[i]);
         }
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < blackInitialSpawnLocations.Length; i++)
         {
             SpawnObject(ColorMode.Black, blackInitialSpawnLocations[i]);
         }
