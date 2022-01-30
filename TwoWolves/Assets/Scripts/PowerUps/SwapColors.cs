@@ -52,7 +52,11 @@ public class SwapColors : MonoBehaviour, IPowerUps
     private IEnumerator SwitchColor()
     {
         controller.colorMode = controller.GetOppositeColor();
+        controller.transform.GetChild(0).gameObject.SetActive(false);
+        controller.transform.GetChild(1).gameObject.SetActive(true);
         yield return new WaitForSeconds(duration);
         controller.colorMode = controller.GetOppositeColor();
+        controller.transform.GetChild(0).gameObject.SetActive(true);
+        controller.transform.GetChild(1).gameObject.SetActive(false);
     }
 }
