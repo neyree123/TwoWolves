@@ -36,6 +36,7 @@ public class MoonScore : MonoBehaviour
     [SerializeField] GameObject borderMang;
     [SerializeField] SetBorders.Anchor anchor;
 
+    private AudioSource scoreSound;
     void Start()
     {
         //Set the colors for the sprites
@@ -55,7 +56,7 @@ public class MoonScore : MonoBehaviour
 
         objectParent = GameObject.Find("ObjectManager").GetComponent<ObjectParent>();
 
-        
+        scoreSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -109,6 +110,9 @@ public class MoonScore : MonoBehaviour
                 UpdatePurpleScore();
                 objectParent.blackObjects.Remove(obj.transform);
             }
+
+            //Play the score sound whenever a player scores
+            scoreSound.Play();
 
             //Get rid of the object
             Destroy(obj.gameObject);

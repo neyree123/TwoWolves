@@ -114,3 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMultiplier: 1.5
   duration: 5
+  audioManager: {fileID: 3937018004277532313, guid: f015f1d656804c34391388a79a86ddb7, type: 3}
+  speedSound: {fileID: 8300000, guid: 3aa44d05335ea1549b83e7e3f586bd2f, type: 3}
+  volume: 0.5

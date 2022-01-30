@@ -16,15 +16,25 @@ public class SpeedUp : MonoBehaviour, IPowerUps
     CircleCollider2D circleCollider;
     [SerializeField] float duration;
 
+    //Audio
+    private AudioManager audioManager;
+    public AudioClip speedSound;
+    [Range(0.0f, 1.0f)]
+    public float volume = .5f;
+
     // Start is called before the first frame update
     void Start()
     {
         sprite = gameObject.GetComponent<SpriteRenderer>();
         circleCollider = gameObject.GetComponent<CircleCollider2D>();
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     public void ActivatePower()
     {
+        //Play audio clip
+        audioManager.PlaySound(speedSound, volume);
+
         //Player moves faster
         controller = player.GetComponent<PlayerController>();
         initialSpeed = controller.speed;
