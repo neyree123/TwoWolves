@@ -11,6 +11,7 @@ public class SetBorders : MonoBehaviour
     [SerializeField]GameObject[] borders;
 
     [SerializeField] GameObject[] players;
+    Vector3[] playerStartPos = new Vector3[2];
     [SerializeField] float distanceFromWall;
     [SerializeField] float wolfOffset;
 
@@ -43,6 +44,7 @@ public class SetBorders : MonoBehaviour
 
         //Adjust Yellow player 2 Pos
         SetRelativePos(players[1], yellowAnchor, distanceFromWall, wolfOffset);
+        playerStartPos[1] = players[1].transform.position;
 
         //Lower Wall
         SetRelativePos(borders[2], Anchor.Bottom, -scale);
@@ -54,12 +56,16 @@ public class SetBorders : MonoBehaviour
 
         //Adjust Purple Player 1 Pos
         SetRelativePos(players[0], purpleAnchor, distanceFromWall, -wolfOffset);
+        playerStartPos[0] = players[0].transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        for(int i = 0; i < 2; i++)
+        {
+            KeepPlayerInBounds(players[i], playerStartPos[i]);
+        }
     }
 
     /// <summary>
@@ -110,5 +116,14 @@ public class SetBorders : MonoBehaviour
                 obj.transform.position = new Vector3(0, 0, 0);
                 break;
         }
+    }
+
+    void KeepPlayerInBounds(GameObject player, Vector3 startPos)
+    {
+        float x = player.transform.position.x;
+        float y = player.transform.position.y;
+
+        if (x > horz || x < -horz || y > vert || y < -vert)
+            player.transform.position = startPos;
     }
 }
