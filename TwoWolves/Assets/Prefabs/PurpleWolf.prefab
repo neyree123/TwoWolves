@@ -174,7 +174,7 @@ MonoBehaviour:
   attractRange: 5
   purpleAttraction: {fileID: 199333902326789081, guid: 604207a2fcaf22c42a42ef7b95ae3929, type: 3}
   yellowAttraction: {fileID: 6370193808397192340, guid: bd9631f5196a4f84291b56f9a6827464, type: 3}
-  cancelImage: {fileID: 0}
+  cancelImage: {fileID: 5798756507332247983}
 --- !u!95 &4088782089167359220
 Animator:
   serializedVersion: 3
