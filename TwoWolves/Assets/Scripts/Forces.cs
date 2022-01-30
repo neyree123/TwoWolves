@@ -97,7 +97,8 @@ public class Forces : MonoBehaviour
                     t.GetComponent<Rigidbody2D>().AddForce(force);
                 }
             }
-            Instantiate(purpleRepulsion,transform);
+            if(purpleRepulsion != null)
+                Instantiate(purpleRepulsion,transform);
         }
         else if(canUse)
         {
@@ -110,7 +111,8 @@ public class Forces : MonoBehaviour
                     t.GetComponent<Rigidbody2D>().AddForce(force);
                 }
             }
-            Instantiate(yellowRepulsion,transform);
+            if(yellowRepulsion != null)
+                Instantiate(yellowRepulsion,transform);
         }
     }
 
