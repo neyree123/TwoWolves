@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SetBorders : MonoBehaviour
 {
-    public float vert;
+    float vert;
     float horz;
     float scale;
 
@@ -12,7 +12,7 @@ public class SetBorders : MonoBehaviour
 
     [SerializeField] GameObject[] players;
     [SerializeField] float distanceFromWall;
-    //[SerializeField] float offset;
+    [SerializeField] float wolfOffset;
 
     public enum Anchor {TopLeft, Top, TopRight, Right, BottomRight, Bottom, BottomLeft, Left, Center};
 
@@ -42,7 +42,7 @@ public class SetBorders : MonoBehaviour
         borders[1].transform.localScale = new Vector3(1, vert * 2, 1);
 
         //Adjust Yellow player 2 Pos
-        SetRelativePos(players[1], yellowAnchor, distanceFromWall);
+        SetRelativePos(players[1], yellowAnchor, distanceFromWall, wolfOffset);
 
         //Lower Wall
         SetRelativePos(borders[2], Anchor.Bottom, -scale);
@@ -53,7 +53,7 @@ public class SetBorders : MonoBehaviour
         borders[3].transform.localScale = new Vector3(1, vert * 2, 1);
 
         //Adjust Purple Player 1 Pos
-        SetRelativePos(players[0], purpleAnchor, distanceFromWall);
+        SetRelativePos(players[0], purpleAnchor, distanceFromWall, -wolfOffset);
     }
 
     // Update is called once per frame
