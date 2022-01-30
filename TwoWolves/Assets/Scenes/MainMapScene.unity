@@ -418,6 +418,54 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 982205615}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: blackInitialSpawnLocations.Array.data[0].x
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: blackInitialSpawnLocations.Array.data[0].y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: blackInitialSpawnLocations.Array.data[1].x
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: blackInitialSpawnLocations.Array.data[1].y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: blackInitialSpawnLocations.Array.data[2].x
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: blackInitialSpawnLocations.Array.data[2].y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: whiteInitialSpawnLocations.Array.data[0].x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: whiteInitialSpawnLocations.Array.data[0].y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: whiteInitialSpawnLocations.Array.data[1].x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: whiteInitialSpawnLocations.Array.data[1].y
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: whiteInitialSpawnLocations.Array.data[2].x
+      value: -5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: whiteInitialSpawnLocations.Array.data[2].y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3490780564357860344, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
       propertyPath: m_Name
       value: Moon
