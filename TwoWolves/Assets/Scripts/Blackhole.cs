@@ -13,6 +13,9 @@ public class Blackhole : MonoBehaviour
     private Vector3 purpleSpawnPosition;
     private Vector3 yellowSpawnPosition;
 
+    [SerializeField] GameObject borderMang;
+    [SerializeField] SetBorders.Anchor anchor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,9 @@ public class Blackhole : MonoBehaviour
 
         purpleSpawnPosition = purpleTransform.position;
         yellowSpawnPosition = yellowTransform.position;
+
+        SetBorders bord = borderMang.GetComponent<SetBorders>();
+        bord.SetRelativePos(gameObject, anchor);
     }
 
     // Update is called once per frame
