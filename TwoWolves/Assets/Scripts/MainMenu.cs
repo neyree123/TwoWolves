@@ -21,6 +21,11 @@ public class MainMenu : MonoBehaviour
         
     }
 
+    public void Again()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     //suprise, quits the game 
     public void QuitGame()
     {
