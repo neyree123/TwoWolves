@@ -130,11 +130,11 @@ MonoBehaviour:
   blackObjects: []
   whiteObjects: []
   objectPrefab: {fileID: 7652340531732688399, guid: d9fe9c47ae4e81440a8819fed871fcad, type: 3}
-  roundTimeTotal: 120
+  roundTimeTotal: 105
   timeBeforeSpawnRateIncrease: 20
   timer: 0
-  maxTimeBeforeObjectSpawn: 10
-  minTimeBeforeObjectSpawn: 5
+  maxTimeBeforeObjectSpawn: 7
+  minTimeBeforeObjectSpawn: 3
   spawnChangeIncrement: 2
   timerText: {fileID: 0}
   moonWidth: 2
@@ -153,7 +153,7 @@ MonoBehaviour:
   minSpawnAmount: 1
   maxSpawnAmount: 2
   powerUpParent: {fileID: 8343277890219533141}
-  maxCurrentAmount: 5
+  maxCurrentAmount: 3
   powerUpPrefabs:
   - {fileID: 2715670358135796068, guid: d0d5e5662f202d046accdd33223585f4, type: 3}
   - {fileID: 1022751106526627209, guid: 1f7c37f3d53b92649a6df5429dce6d6f, type: 3}

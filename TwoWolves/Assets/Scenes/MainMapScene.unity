@@ -418,6 +418,14 @@ PrefabInstance:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 982205615}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: blackInitialSpawnLocations.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: whiteInitialSpawnLocations.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3490780564357860344, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
       propertyPath: m_Name
       value: Moon
