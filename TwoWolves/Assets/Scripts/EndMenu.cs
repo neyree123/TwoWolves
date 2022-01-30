@@ -9,7 +9,14 @@ public class EndMenu : MonoBehaviour
     public TextMeshProUGUI winnerText;
     private void Start()
     {
-        winnerText.text = GameInfo.winner + " wins!";
+        if (GameInfo.winner != "No one")
+        {
+            winnerText.text = "You have fed the " + GameInfo.winner + " Wolf!";
+        }
+        else
+        {
+            winnerText.text = "You have fed neither wolf.";
+        }
     }
 
     public void BackToStart()

@@ -7,6 +7,12 @@ public class MainMenu : MonoBehaviour
     //Main Menu
 
     const int numOfLevels = 5;
+
+    public void NextScreen()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     public void PlayGame()
     {
         int level = Random.Range(2, 5);

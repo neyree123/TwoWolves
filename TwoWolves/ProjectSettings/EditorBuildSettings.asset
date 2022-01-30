@@ -12,18 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/ControlsScreen.unity
     guid: f4b197088a3bb6c43ae7976eafec244a
   - enabled: 1
-    path: Assets/Scenes/MainMapScene.unity
+    path: Assets/Scenes/PowerUpScreen.unity
+    guid: c3a28b52440405341a59ff913b452232
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
     guid: c09ec8f10df0e7c4a917769954f25bee
-  - enabled: 1
-    path: Assets/Scenes/BlackholeMapScene.unity
-    guid: 182c679d5c6f9b84b9b79e8b333f9c81
-  - enabled: 1
-    path: Assets/Scenes/SatelliteMapScene.unity
-    guid: 2604db751ff6c114f8e078a74b1cf985
   - enabled: 1
     path: Assets/Scenes/VictoryScreen.unity
     guid: 16c1023e2fb66c44095828a8415cebed
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/EndScene.unity
     guid: 4e87797e4da2c5b49b7912bc07089677
   m_configObjects: {}
