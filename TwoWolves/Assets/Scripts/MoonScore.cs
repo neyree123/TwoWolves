@@ -144,11 +144,11 @@ public class MoonScore : MonoBehaviour
         }
         else if(currentScore > 0)
         {
-            GameInfo.winner = "Yeller";
+            GameInfo.winner = "Yellow";
         }
         else if(currentScore < 0)
         {
-            GameInfo.winner = "Purper";
+            GameInfo.winner = "Purple";
         }
 
         SceneManager.LoadScene("VictoryScreen");
