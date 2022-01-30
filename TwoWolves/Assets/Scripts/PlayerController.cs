@@ -13,11 +13,21 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private bool isFlipped = false;
 
+    //Audio for using the force ability
+    private AudioSource playerAudio;
+    public AudioClip forceSound;
+    public AudioClip reversedForceSound;
+    public AudioClip forceSoundCooldown;
+    [HideInInspector]
+    public AudioClip currentForceSound;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         forces = GetComponent<Forces>();
         anim = GetComponent<Animator>();
+        playerAudio = GetComponent<AudioSource>();
+        currentForceSound = forceSound;
     }
 
     void FixedUpdate()
@@ -45,9 +55,14 @@ public class PlayerController : MonoBehaviour
     {
         if (forces.canUse)
         {
+            playerAudio.PlayOneShot(currentForceSound);
             forces.Attract(colorMode);
             forces.Repulse(GetOppositeColor());
             StartCoroutine(forces.Cooldown());
+        }
+        else
+        {
+            playerAudio.PlayOneShot(forceSoundCooldown);
         }
     }
 
@@ -55,9 +70,14 @@ public class PlayerController : MonoBehaviour
     {
         if (forces.canUse)
         {
+            playerAudio.PlayOneShot(currentForceSound);
             forces.Attract(colorMode);
             forces.Repulse(GetOppositeColor());
             StartCoroutine(forces.Cooldown());
+        }
+        else
+        {
+            playerAudio.PlayOneShot(forceSoundCooldown);
         }
     }
 
