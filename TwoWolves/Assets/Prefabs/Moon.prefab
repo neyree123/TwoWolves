@@ -130,7 +130,7 @@ MonoBehaviour:
   blackObjects: []
   whiteObjects: []
   objectPrefab: {fileID: 7652340531732688399, guid: d9fe9c47ae4e81440a8819fed871fcad, type: 3}
-  roundTimeTotal: 50
+  roundTimeTotal: 120
   timeBeforeSpawnRateIncrease: 20
   timer: 0
   maxTimeBeforeObjectSpawn: 10
