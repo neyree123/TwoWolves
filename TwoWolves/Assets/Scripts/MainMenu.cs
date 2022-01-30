@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        int level = Random.Range(2, 5);
+        int level = Random.Range(3, 6);
 
         Debug.Log(level);
         SceneManager.LoadScene(level);

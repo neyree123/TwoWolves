@@ -2346,6 +2346,10 @@ PrefabInstance:
       propertyPath: anchor
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5226946337478928919, guid: 63c4f626a609d004f847e60bffb39784, type: 3}
+      propertyPath: setBorders
+      value: 
+      objectReference: {fileID: 1454912147}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63c4f626a609d004f847e60bffb39784, type: 3}
 --- !u!1001 &1841382872529279430

@@ -868,6 +868,10 @@ PrefabInstance:
       propertyPath: setBorders
       value: 
       objectReference: {fileID: 311734335}
+    - target: {fileID: 1856641863, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
+      propertyPath: roundTimeTotal
+      value: 105
+      objectReference: {fileID: 0}
     - target: {fileID: 3490780564357860344, guid: 5db6881401ec6d74aa69eef1503e05ea, type: 3}
       propertyPath: m_Name
       value: Moon
@@ -1182,7 +1186,7 @@ PrefabInstance:
     - target: {fileID: 997345303, guid: ef39a294a6a2c224ea2fb59361116c76, type: 3}
       propertyPath: cancelImage
       value: 
-      objectReference: {fileID: 1734240633}
+      objectReference: {fileID: 0}
     - target: {fileID: 997345303, guid: ef39a294a6a2c224ea2fb59361116c76, type: 3}
       propertyPath: objectParent
       value: 
@@ -1862,11 +1866,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1547112260}
   m_CullTransparentMesh: 1
---- !u!1 &1734240633 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5798756507332247983, guid: ef39a294a6a2c224ea2fb59361116c76, type: 3}
-  m_PrefabInstance: {fileID: 1230876547}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1843676913
 GameObject:
   m_ObjectHideFlags: 0
